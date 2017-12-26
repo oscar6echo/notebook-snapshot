@@ -1,0 +1,15 @@
+
+.vscode
+.DS_Store
+*.DS_Store
+*.py[cod]
+**/*.ipynb_checkpoints
+*.egg-info
+dist
+MANIFEST
+*.old.*
+temp/
+dump/
+store/
+
+NotebookExecute.py

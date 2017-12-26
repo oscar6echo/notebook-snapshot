@@ -1,0 +1,55 @@
+
+{% extends 'full.tpl'%}
+
+{% block header %}
+{{ super() }}
+
+<style>
+
+{-% include 'notebook.css' %-}
+
+{-% if data.is_ribbon %-}
+{-% include 'ribbon.css' %-}
+{-% endif %-}
+
+{-% if data.hide_code %-}
+{-% include 'hide_prompt.css' %-}
+{-% endif %-}
+</style>
+
+{% endblock header %}
+
+
+{% block body %}
+{{ super() }}
+
+{-% if data.is_ribbon %-}
+    <div class="corner-ribbon __$data.ribbon_position$__ sticky __$data.ribbon_color$__">__$data.ribbon_text$__</div>
+{-% endif %-}
+{% endblock body %}
+
+
+{% block input_group %}
+
+{-% if data.hide_code %-}
+{-% else %-}
+{{ super() }}
+{-% endif %-}
+
+{% endblock input_group %}
+
+
+{% block any_cell %}
+
+{% if cell.get('source', '').startswith('# NBCONVERT IMPORTANT') or cell['metadata'].get('nbconvert', '') == 'important' %}
+    <div style="border:__$data.important_border$__ solid __$data.important_color$__; background-color: __$data.important_background_color$__">
+        {{ super() }}
+    </div>
+{% elif cell.get('source', '').startswith('# NBCONVERT REMOVE') or cell['metadata'].get('nbconvert', '') == 'remove' %}
+    <div>
+    </div>
+{% else %}
+    {{ super() }}
+{% endif %}
+
+{% endblock any_cell %}

@@ -1,0 +1,7 @@
+
+.output_prompt {
+    visibility: hidden;
+}
+.prompt {
+    min-width: 5%; /* 14px */
+}
