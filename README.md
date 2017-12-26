@@ -27,9 +27,9 @@ pip install notebook_snapshot
 
 ## 3 - User Guide
 
-Read and run the [demo notebook](TBD).  
+Read and run the [demo notebook](https://github.com/oscar6echo/notebook-snapshot/blob/master/demo_notebook_snapshot.ipynb).  
 It will
-+ run the [sample notebook](TBD)
++ run the [sample notebook](http://nbviewer.jupyter.org/github/oscar6echo/notebook-snapshot/blob/master/sample_notebook.ipynb)
 + snapshot it as html after applying custom mofications
 + move the executed notebook and its snapshot, both time stamped, to an archive folder
 
@@ -44,9 +44,9 @@ The configuration options are self explanatory from the demo notebook except the
 
 ## 4 - Result Sample
 
-As an example the [sample notebook](TBD) can be converted to
+As an example the [sample notebook](http://nbviewer.jupyter.org/github/oscar6echo/notebook-snapshot/blob/master/sample_notebook.ipynb) can be converted to
 
-<img src="img/screenshot_sample_notebook.png" align="center" width=500>
+<img src="img/screenshot_sample_notebook.png" align="center" width=700>
 
 
 ## 5 - To Do
