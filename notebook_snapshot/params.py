@@ -1,7 +1,6 @@
 
 import json
 
-from IPython.display import display, Markdown
 from copy import deepcopy as copy
 
 
@@ -82,10 +81,5 @@ class Params:
                        indent=indent)
         print(d)
 
-    def info(self):
-        md = """
-```json
-{}
-```
-""".format(self.to_dict())
-        display(Markdown(md))
+    def __repr__(self):
+        return str(self.to_dict())

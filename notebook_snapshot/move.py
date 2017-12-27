@@ -3,8 +3,6 @@ import os
 import glob
 import shutil
 
-from IPython.display import display, Markdown
-
 
 def move(tag,
          folder='store',
@@ -20,10 +18,7 @@ def move(tag,
         shutil.move(f, folder)
 
     if verbose:
-        md = """
-Moved the files below to folder {}
-```json
-{}
-```
-""".format(folder, filenames)
-        display(Markdown(md))
+        msg = 'Moved the files below to folder {}'
+        msg =msg.format(folder)
+        print(msg)
+        print('\n'.join(filenames))
