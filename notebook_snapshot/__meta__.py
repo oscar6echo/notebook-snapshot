@@ -3,7 +3,7 @@ __name__ = 'notebook_snapshot'
 name_url = __name__.replace('_', '-')
 
 __packages__ = [__name__]
-__version__ = '0.1.0'
+__version__ = '0.1.1'
 __description__ = 'Execute a notebook, snapshot it as html (option: embedding all images) and store the result'
 __author__ = 'oscar6echo'
 __author_email__ = 'olivier.borderies@gmail.com'
