@@ -4,9 +4,9 @@
 {% block header %}
 {{ super() }}
 
-<style>
+<link rel="stylesheet" type="text/css" href="https://cdn.jupyter.org/notebook/5.4.0/style/style.min.css">
 
-{-% include 'notebook.css' %-}
+<style>
 
 {-% if data.is_ribbon %-}
 {-% include 'ribbon.css' %-}
@@ -16,6 +16,10 @@
 {-% include 'hide_prompt.css' %-}
 {-% endif %-}
 </style>
+
+{-% if data.ipywidgets %-}
+<script src="https://unpkg.com/@jupyter-widgets/html-manager@*/dist/embed-amd.js" crossorigin="anonymous"></script>
+{-% endif %-}
 
 {% endblock header %}
 
