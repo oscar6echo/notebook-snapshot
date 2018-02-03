@@ -51,9 +51,13 @@ As an example the [sample notebook](http://nbviewer.jupyter.org/github/oscar6ech
 
 ## 5 - To Do
 
-Remove injection of notebook CSS 5.2.2 when nbconvert version goes over 5.3.1.  
-Waiting for nbconvert [PR#682](https://github.com/jupyter/nbconvert/pull/682) to come into effect.  
+1. Remove injection of notebook CSS 5.4.0 when nbconvert version goes over 5.3.1.  
+    Waiting for nbconvert [PR#682](https://github.com/jupyter/nbconvert/pull/682) to come into effect.  
 
+1. Looking for a way to link notebook CSS instead of adding it to the file - to save ~300kB file size.  
+    Cf [question](https://groups.google.com/forum/#!topic/jupyter/SElf7yRwamA) on [Jupyter nbconvert Google Group](https://groups.google.com/forum/#!forum/jupyter). 
 
+1. **IMPORTANT** Looking for a way to save widget states from nbconvert.  
+    Now only possible via GUI.
 
 <!-- pandoc --from=markdown --to=rst --output=README.rst README.md -->
