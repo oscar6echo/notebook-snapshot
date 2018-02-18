@@ -4,8 +4,11 @@
 # cf. https://pythonhosted.org/setuptools/setuptools.html
 
 # commands:
-# python setup.py sdist upload -r testpypi
+# 1 liner
 # python setup.py sdist upload -r pypi
+# 2 steps
+# python setup.py sdist
+# twine upload dist/*
 
 
 from os import path
