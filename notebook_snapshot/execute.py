@@ -21,8 +21,8 @@ def execute(path_nb,
     folder = os.path.dirname(path_nb)
     filename = os.path.basename(path_nb)
 
+    now = dt.datetime.now().strftime('%Y%m%d_%H%M%S.%f')[:-3]
     if dated:
-        now = dt.datetime.now().strftime('%Y%m%d_%H%M%S.%f')[:-3]
         save_name = '{}_{}'.format(now, filename)
     else:
         save_name = filename
