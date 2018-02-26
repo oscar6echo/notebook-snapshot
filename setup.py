@@ -12,10 +12,8 @@
 
 
 from os import path
-from codecs import open
 from setuptools import setup, find_packages
 from distutils.util import convert_path
-from pip.req import parse_requirements
 
 module = 'notebook_snapshot'
 
@@ -40,8 +38,11 @@ classifiers = meta_ns['__classifiers__']
 include_package_data = meta_ns['__include_package_data__']
 package_data = meta_ns['__package_data__']
 
-install_requires = parse_requirements('requirements.txt', session=False)
-install_requires = [str(ir.req) for ir in install_requires]
+# read requirements.txt
+with open('requirements.txt', 'r') as f:
+    content = f.read()
+li_req = content.split('\n')
+install_requires = [e.strip() for e in li_req if len(e)]
 
 # with open('README.rst') as f:
 #     long_description = f.read()
