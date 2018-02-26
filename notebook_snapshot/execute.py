@@ -31,7 +31,7 @@ def execute(path_nb,
     path_out = os.path.join(folder, save_name)
 
     # load nb
-    with open(path_nb) as f:
+    with open(path_nb, 'r', encoding='utf-8') as f:
         nb = nbformat.read(f, as_version=4)
 
     # create ep
@@ -50,7 +50,7 @@ def execute(path_nb,
         print(msg)
         raise
     finally:
-        with open(path_out, mode='w') as f:
+        with open(path_out, mode='w', encoding='utf-8') as f:
             nbformat.write(nb, f)
 
     if verbose:
